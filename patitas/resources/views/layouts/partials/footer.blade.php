@@ -1,5 +1,5 @@
 <footer class="_footer">
-    <h4>Todos los derechos reservados: <a href="/">Tomas Martín Fernandez Wettstein</a></h4>
+    <h4 class="_texto_footer">Todos los derechos reservados: Tomas Martín Fernandez Wettstein</h4>
 </footer>
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script type="text/javascript">
