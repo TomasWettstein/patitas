@@ -1,5 +1,5 @@
 <header>
-    <div class="logo">Patitas</div>
+    <a href="/" class="logo">Patitas</a>
     <nav>
         <ul class = "_lista_nav">
             @guest
