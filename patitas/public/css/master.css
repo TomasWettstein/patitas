@@ -144,15 +144,24 @@ header nav{
     padding: 1em;
 }
 ._caja_alerta_home{
-    display: flex;
-    flex-direction: column;
     background-color:rgba(228, 226, 185, 1);
     border-radius: 3px;
-    padding: 1em;
+    border-top: black solid;
     width: 80%;
 }
 ._img_alerta{
     width: 100%;
+}
+._btn_home{
+    font-family: 'Acme', sans-serif;
+    font-size: 1em;
+    text-decoration: none;
+    color: black;
+    padding: 2px;
+}
+._btn_home:hover{
+    color: white;
+    background-color: green;
 }
 /*Login*/
 ._seccion_login{

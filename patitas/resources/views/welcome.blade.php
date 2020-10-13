@@ -25,6 +25,7 @@
                     <p>Color: blanco</p>
                     <p>Raza: Labrador</p>
                     <p>Detalle: Muy cariñoso</p>
+                    <button class="_btn_home">Ver esta alerta</button>
                 </div>
 
             </div>
@@ -35,6 +36,7 @@
                     <p>Color: blanco</p>
                     <p>Raza: Labrador</p>
                     <p>Detalle: Muy cariñoso</p>
+                    <button class="_btn_home">Ver esta alerta</button>
                 </div>
             </div>
             <div class="_caja_categoria_home">
@@ -44,6 +46,7 @@
                     <p>Color: blanco</p>
                     <p>Raza: Labrador</p>
                     <p>Detalle: Muy cariñoso</p>
+                    <button class="_btn_home">Ver esta alerta</button>
                 </div>
             </div>
         </div>
