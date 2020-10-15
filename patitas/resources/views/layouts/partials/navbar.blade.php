@@ -15,9 +15,12 @@
              <li class = "_nav_item">
                 <a href = "/" class = "_nav_texto">Ver alertas</a>
              </li>
-             <li class = "_nav_item">
-                <a href = "/" class = "_nav_texto">Crear alerta</a>
-             </li>
+                 <select class="_nav_item_select" id="">
+                     <option value="" selected disabled>Crear alerta</option>
+                    @foreach ($categorias as $categoria)
+                 <option value=""><a href="/crearAlerta/{{$categoria->id}}">{{$categoria->nombre}}</a></option>
+                    @endforeach
+                 </select>
              <li class = "_nav_item">
                 <a href = "/" class = "_nav_texto">Adoptar</a>
              </li>

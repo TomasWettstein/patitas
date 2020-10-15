@@ -37,6 +37,13 @@ header nav{
 ._nav_item{
     list-style: none;
 }
+._nav_item_select{
+    background-color: rgba(169, 164, 102, 0.82);
+    list-style: none;
+    border: none;
+    font-family: 'Acme', sans-serif;
+    font-size: 1em;
+}
 ._nav_texto{
     height: 50px;
     line-height: 50px;
@@ -192,6 +199,13 @@ header nav{
     width: 30%;
     padding: 1em;
     border-radius: 2px;
+}
+._caja_campos_login{
+    display: flex;
+    flex-direction: column;
+}
+._error_login{
+    color: red;
 }
 ._texto_login{
     font-size: 1em;

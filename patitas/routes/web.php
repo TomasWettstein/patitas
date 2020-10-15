@@ -12,10 +12,11 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*Rutas Generales*/
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/crearAlerta/{id}', 'appController@mostrarFormAlerta');
 
 Auth::routes();
 

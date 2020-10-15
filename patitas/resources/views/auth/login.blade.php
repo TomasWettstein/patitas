@@ -7,11 +7,11 @@
         <form method="POST" action="{{ route('login') }}" class="_form_login">
             @csrf
             <label for="email" class="_texto_login">Email</label>
-            <div class="">
+            <div class="_caja_campos_login">
                 <input id="email" type="email" class="_inp_login @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                 @error('email')
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
+                <span class="_error_login" role="alert">
+                    <strong>Estas credenciales no coinciden con nuestros registros.</strong>
                 </span>
                 @enderror
             </div>
@@ -19,8 +19,8 @@
             <div class="">
                 <input id="password" type="password" class="_inp_login" @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
                 @error('password')
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
+                <span class="_error_login" role="alert">
+                    <strong>Estas credenciales no coinciden con nuestros registros.</strong>
                 </span>
                 @enderror
             </div>
