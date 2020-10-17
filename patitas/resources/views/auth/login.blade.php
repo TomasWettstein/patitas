@@ -16,7 +16,7 @@
                 @enderror
             </div>
             <label for="password" class="_texto_login">Contraseña</label>
-            <div class="">
+            <div class="_caja_campos_login">
                 <input id="password" type="password" class="_inp_login" @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
                 @error('password')
                 <span class="_error_login" role="alert">
@@ -24,20 +24,18 @@
                 </span>
                 @enderror
             </div>
-            <div class="">
+            <div class="_caja_campos_login">
                 <input class="" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                 <label class="" for="remember">
                    Recordarme
                 </label>
             </div>
-            <div class="">
-                <button type="submit" class="_btn_login">
+            <div class="_caja_campos_login">
+                <button type="submit" class="btn btn-outline-success _btn_login">
                     Iniciar sesion
                 </button>
                 @if (Route::has('password.request'))
-                <a class="" href="{{ route('password.request') }}">
-                    ¿Olvidaste tu contraseña?
-                </a>
+                <button class="btn btn-dark mt-3"><a class="" href="{{ route('password.request') }}">¿Olvidaste tu contraseña?</a></button>
                 @endif
             </div>
         </form>

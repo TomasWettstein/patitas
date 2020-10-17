@@ -54,6 +54,8 @@ header nav{
 }
 ._nav_texto:hover{
     background-color: blue;
+    text-decoration: none;
+    color: white;
     transition: .5s;
 }
 ._menu_toggle{
@@ -73,6 +75,9 @@ header nav{
     bottom: 0;
     left: 0;
     text-align: center;
+}
+._texto_footer{
+    font-size: 1em;
 }
 /*vista de bienvenida para usuarios no logueados*/
 ._seccion_bvnda{
@@ -96,24 +101,13 @@ header nav{
     flex-direction: column;
     align-items: center;
 }
-._boton_bvnda{
-    display: flex;
-    transition-duration: 0.4s;
-    width: 100px;
-    padding: 1em;
-    text-align: center;
-    border-radius: 5px;
-    transition: 0.8s;
-
-}
 ._boton_bvnda_texto{
+    color: black;
+}
+._boton_bvnda_texto:hover{
     font-family: 'Acme', sans-serif;
     text-decoration: none;
     color: black;
-}
-._boton_bvnda :hover{
-    padding-bottom: 3px;
-    color: cadetblue;
 }
 /*Inicio para usuarios loguados*/
 ._seccion_home{
@@ -164,7 +158,6 @@ header nav{
     font-size: 1em;
     text-decoration: none;
     color: black;
-    padding: 2px;
 }
 ._btn_home:hover{
     color: white;
@@ -211,19 +204,50 @@ header nav{
     font-size: 1em;
 }
 ._btn_login{
-    font-family: 'Acme', sans-serif;
-    font-size: 1.3em;
-    text-decoration: none;
     color: black;
-    padding: 2px;
-    margin-top: 0.5em;
 }
 ._inp_login:hover{
     border-color: green;
 }
-._btn_login:hover{
-    padding-bottom: 3px;
-    color: cadetblue;
+/*Crear alertas*/
+._seccion_crear_alerta{
+    width: 100%;
+    margin-top: 50px;
+    justify-content: center;
+    margin-bottom: 5em;
+
+}
+._caja_crear_alerta{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+}
+._caja_btn_crear_alerta{
+    margin-top: 3em;
+    margin-right: 2em;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(169, 164, 102, 0.82);
+    width: 100%;
+    align-items: center;
+}
+._texto_crear_alerta{
+    text-align: center;
+    color: white;
+
+}
+._btn_crear_alerta{
+    width: 50%;
+}
+._btn_crear_alerta_texto{
+    font-family: 'Acme', sans-serif;
+    text-decoration: none;
+    color: white;
+}
+._btn_crear_alerta_texto:hover{
+text-decoration: none;
+color: white;
 }
 @media(max-width: 991px){
     header{
@@ -287,5 +311,9 @@ header nav{
     ._form_login{
         width: 90%;
         background-color: unset;
+    }
+    /*Crear alerta*/
+    ._caja_crear_alerta{
+        flex-direction: column;
     }
 }

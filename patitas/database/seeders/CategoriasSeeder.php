@@ -16,12 +16,12 @@ class CategoriasSeeder extends Seeder
     {
         DB::table('categorias')->insert(
             [
-                "nombre" => "Perdidos",
+                "nombre" => "Perdido",
             ]
             );
         DB::table('categorias')->insert(
             [
-                "nombre" => "Encontrados",
+                "nombre" => "Encontrado",
             ]
             );
         DB::table('categorias')->insert(

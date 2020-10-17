@@ -5,9 +5,9 @@
     <div class="_caja_bvnda">
         <h2 class="_titulo_bvnda">Para comenzar a usar la app tenes que iniciar sesion</h2>
         <div class="_caja_dos_bvnda">
-            <button class="_boton_bvnda"><a href="/login" class="_boton_bvnda_texto">Iniciar sesion</a></button>
+            <button class="btn btn-outline-success"><a href="/login" class="_boton_bvnda_texto">Iniciar sesion</a></button>
             <h4>¿Todavia no tenes una cuenta? Crea una ahora!</h4>
-            <button class="_boton_bvnda"><a href="/register" class="_boton_bvnda_texto">Crear cuenta nueva</a></button>
+            <button class="btn btn-outline-success"><a href="/register" class="_boton_bvnda_texto">Crear cuenta nueva</a></button>
         </div>
     </div>
 
@@ -25,7 +25,7 @@
                     <p>Color: blanco</p>
                     <p>Raza: Labrador</p>
                     <p>Detalle: Muy cariñoso</p>
-                    <button class="_btn_home">Ver esta alerta</button>
+                    <button class="btn btn-outline-success _btn_home">Ver esta alerta</button>
                 </div>
 
             </div>
@@ -36,7 +36,7 @@
                     <p>Color: blanco</p>
                     <p>Raza: Labrador</p>
                     <p>Detalle: Muy cariñoso</p>
-                    <button class="_btn_home">Ver esta alerta</button>
+                    <button class="btn btn-outline-success _btn_home">Ver esta alerta</button>
                 </div>
             </div>
             <div class="_caja_categoria_home">
@@ -46,7 +46,7 @@
                     <p>Color: blanco</p>
                     <p>Raza: Labrador</p>
                     <p>Detalle: Muy cariñoso</p>
-                    <button class="_btn_home">Ver esta alerta</button>
+                    <button class="btn btn-outline-success _btn_home">Ver esta alerta</button>
                 </div>
             </div>
         </div>

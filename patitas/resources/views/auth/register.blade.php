@@ -45,7 +45,7 @@
                 </div>
 
             <div class="form-group row mb-0">
-                    <button type="submit" class="_btn_login">
+                    <button type="submit" class="btn btn-outline-success _btn_login mt-2">
                         Registrarse
                     </button>
             </div>

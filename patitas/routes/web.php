@@ -16,8 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/crearAlerta/{id}', 'appController@mostrarFormAlerta');
 
 Auth::routes();
+Route::get('/crearAlerta', 'App\Http\Controllers\AppController@mostrarCrearAlerta');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
