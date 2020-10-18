@@ -17,15 +17,15 @@
     <div class="_caja_crear_alerta">
         <div class="_caja_btn_crear_alerta">
             <h2 class="_texto_crear_alerta">Si perdiste a tu mascota no dudes en crear una alerta de perdido!</h2>
-            <button class="btn btn-outline-success _btn_crear_alerta"><a href="" class="_btn_crear_alerta_texto">Alerta perdido</a></button>
+            <button class="btn btn-outline-success _btn_crear_alerta"><a href="/formAlerta" class="_btn_crear_alerta_texto">Alerta perdido</a></button>
         </div>
         <div class="_caja_btn_crear_alerta">
             <h2 class="_texto_crear_alerta">Si encontraste una mascota perdida crea una alerta de encontrado!</h2>
-            <button class="btn btn-outline-success _btn_crear_alerta"><a href="" class="_btn_crear_alerta_texto">Alerta de encontrado</a></button>
+            <button class="btn btn-outline-success _btn_crear_alerta"><a href="/formAlerta" class="_btn_crear_alerta_texto">Alerta de encontrado</a></button>
         </div>
         <div class="_caja_btn_crear_alerta">
             <h2 class="_texto_crear_alerta">Si queres dar en adopcion una mascota, crea una alerta de adopción!</h2>
-            <button class="btn btn-outline-success _btn_crear_alerta"><a href="" class="_btn_crear_alerta_texto">Alerta de Adopción</a></button>
+            <button class="btn btn-outline-success _btn_crear_alerta"><a href="/formAlerta" class="_btn_crear_alerta_texto">Alerta de Adopción</a></button>
         </div> 
     </div>
 </section>

@@ -34,7 +34,7 @@
 
                     @error('password')
                         <span class="_error_login" role="alert">
-                            <strong>{{ $message }}</strong>
+                            <strong>Las contraseñas no coinciden</strong>
                         </span>
                     @enderror
                 </div>

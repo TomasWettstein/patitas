@@ -215,7 +215,6 @@ header nav{
     margin-top: 50px;
     justify-content: center;
     margin-bottom: 5em;
-
 }
 ._caja_crear_alerta{
     display: flex;
@@ -246,9 +245,49 @@ header nav{
     color: white;
 }
 ._btn_crear_alerta_texto:hover{
-text-decoration: none;
-color: white;
+    text-decoration: none;
+    color: white;
 }
+/*Formulario crear alerta*/
+._seccion_form_alerta{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 5em;
+}
+._form_alerta{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3em;
+    background-color: rgba(169, 164, 102, 0.82);
+    width: 40%;
+    padding: 5px;
+}
+._caja_in_alerta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+._texto_form_alerta{
+    display: flex;
+    font-size: 1.3em;
+}
+._in_form_alerta{
+    display: flex;
+    width: 60%;
+}
+._caja_btn_form_alerta{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+._btn_form_alerta{
+    display: flex;
+    width: 20%;
+    margin-top: 2em;
+}
+
 @media(max-width: 991px){
     header{
         padding: 0 5px;
@@ -316,4 +355,26 @@ color: white;
     ._caja_crear_alerta{
         flex-direction: column;
     }
+    /*Formulario para crear alerta*/
+    ._form_alerta{
+        width: 80%;
+    }
+    ._texto_form_alerta{
+        font-size: 1em;
+        text-align: center;
+    }
+    ._in_form_alerta{
+        display: flex;
+        width: 70%;
+    }
+    ._in_form_alerta_file{
+        font-size: 0.8em;
+    }
+    ._btn_form_alerta{
+        display: flex;
+        width: 40%;
+        margin-top: 2em;
+        justify-content: center;
+    }
+    
 }
