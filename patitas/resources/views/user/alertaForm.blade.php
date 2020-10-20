@@ -16,9 +16,14 @@
 <section class="_seccion_form_alerta">
         <form action="/formAlerta" method="post" class="_form_alerta" enctype="multipart/form-data">
             @csrf
+            <ul class="_lista_errores">
+                @foreach ($errors->all() as $error)
+                    <li class="_error">{{ $error }}</li>
+                @endforeach
+            </ul>
             <div  class="_caja_in_alerta">
                 <label for="animal" class="_texto_form_alerta">Indique que animal es</label>
-                <input name="animal" type="text" class="_in_form_alerta" placeholder="Especifique tipo de animal">
+                <input id="animal" name="animal" type="text" class="_in_form_alerta" placeholder="Especifique tipo de animal">
             </div>
             <div class="_caja_in_alerta">
                 <label for="foto" class="_texto_form_alerta">Suba una foto del animal</label>
@@ -26,27 +31,27 @@
             </div>
             <div class="_caja_in_alerta">
                 <label for="nombre" class="_texto_form_alerta">Indique nombre del animal que desea reportar</label>
-                <input name="nombre" type="text" class="_in_form_alerta" placeholder="Especifique nombre del animal">
+                <input id="nombre" name="nombre" type="text" class="_in_form_alerta" placeholder="Especifique nombre del animal">
             </div>
             <div class="_caja_in_alerta">
                 <label for="zona" class="_texto_form_alerta">Indique zona donde esta el animal</label>
-                <input name="zona" type="text" class="_in_form_alerta" placeholder="Especifique zona donde se encuentra">
+                <input id="zona" name="zona" type="text" class="_in_form_alerta" placeholder="Especifique zona donde se encuentra">
             </div>
             <div class="_caja_in_alerta">
                 <label for="color" class="_texto_form_alerta">Describa el color del animal</label>
-                <input name="color" type="text" class="_in_form_alerta" placeholder="Especifique el color del animal">
+                <input id="color" name="color" type="text" class="_in_form_alerta" placeholder="Especifique el color del animal">
             </div>
             <div class="_caja_in_alerta">
                 <label for="raza" class="_texto_form_alerta">Raza de animal</label>
-                <input name="raza" type="text" class="_in_form_alerta" placeholder="Especifique raza del animal">
+                <input id="raza" name="raza" type="text" class="_in_form_alerta" placeholder="Especifique raza del animal">
             </div>
             <div class="_caja_in_alerta">
                 <label for="detalle" class="_texto_form_alerta">Ingrese descripción o detalles del animal</label>
-                <textarea name="detalle" id="" placeholder="Especifique detalles caracteristicos" cols="30" rows="10"></textarea>
+                <textarea id="detalle" name="detalle" id="" placeholder="Especifique detalles caracteristicos" cols="30" rows="10"></textarea>
             </div>
             <div class="_caja_in_alerta">
                 <label for="categoria" class="_texto_form_alerta">Indique tipo de alerta</label>
-                <select name="categoria" id="" class="_in_form_alerta">
+                <select id="categoria" name="categoria" id="" class="_in_form_alerta">
                     <option value="#" selected disabled>Seleccione tipo de alerta...</option>
                     @foreach ($categorias as $categoria)
                     <option value="{{$categoria->id}}">{{$categoria->nombre}}</option>
@@ -58,5 +63,10 @@
             </div>
         </form>
 </section>
+<footer class="_footer">
+    <h4 class="_texto_footer">Todos los derechos reservados: Tomas Martín Fernandez Wettstein</h4>
+</footer>
 @endif
+<script src="{{asset('/js/formAlerta.js')}}"></script>
 @endsection
+

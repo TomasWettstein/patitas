@@ -24,11 +24,13 @@ class AppController extends Controller
         $reglas = [
             "animal" => "required",
             "imagen" => "mimes:jpg,jpeg,png,bmp|required",
+            "zona" => "required",
             "detalle" => "required",
             "categoria" => "required",
+            
         ];
         $mensajes = [
-            "required" => "El campo :attrbiute es obligatorio",
+            "required" => "El campo :attribute es obligatorio",
             "mimes" => "El campo :attribute debe ser una imagen valida",
         ];
         $this->validate($datos, $reglas, $mensajes);

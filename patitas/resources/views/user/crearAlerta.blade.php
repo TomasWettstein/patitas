@@ -29,5 +29,8 @@
         </div> 
     </div>
 </section>
+<footer class="_footer">
+    <h4 class="_texto_footer">Todos los derechos reservados: Tomas Martín Fernandez Wettstein</h4>
+</footer>
 @endif
 @endsection

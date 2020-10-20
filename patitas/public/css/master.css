@@ -287,6 +287,18 @@ header nav{
     width: 20%;
     margin-top: 2em;
 }
+/*Errores */
+._lista_errores{
+    list-style: none;
+    text-align: center;
+margin-right: 1.8em;
+}
+._error{
+    color: red;
+    background-color: rgba(241, 95, 95, 0.7);
+    border-radius: 5px;
+    margin-top: 0.5em;
+}
 
 @media(max-width: 991px){
     header{
