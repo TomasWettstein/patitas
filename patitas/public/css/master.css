@@ -51,11 +51,17 @@ header nav{
     color: black;
     text-decoration: none;
     display: block;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
 }
 ._nav_texto:hover{
     background-color: blue;
     text-decoration: none;
     color: white;
+    background-size: 100% 2px;
     transition: .5s;
 }
 ._menu_toggle{
@@ -71,12 +77,13 @@ header nav{
     background-color: rgba(169, 164, 102, 0.82);
     width: 100%;
     position: fixed;
-    height: 60px;
     bottom: 0;
     left: 0;
     text-align: center;
 }
 ._texto_footer{
+    height: 50px;
+    line-height: 50px;
     font-size: 1em;
 }
 /*vista de bienvenida para usuarios no logueados*/
@@ -291,13 +298,67 @@ header nav{
 ._lista_errores{
     list-style: none;
     text-align: center;
-margin-right: 1.8em;
+    margin-right: 1.8em;
 }
 ._error{
     color: red;
     background-color: rgba(241, 95, 95, 0.7);
     border-radius: 5px;
     margin-top: 0.5em;
+}
+/* Nosotros */
+._seccion_nosotros{
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 5em;
+}
+.slider{
+    border-radius: 1em;
+    width: 50%;
+    margin: auto;
+    overflow: hidden;
+    height: auto;
+    float: left;
+}
+.slider ul{
+    padding: 0;
+    display: flex;
+    width: 400%;
+    animation: cambio 20s infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+}
+.slider li{
+    width: 100%;
+    list-style: none;
+}
+.slider img {
+    width: 100%;
+}
+._caja_texto_nosotros{
+    float: right;
+    background-color: rgba(170, 165, 100, 0.51);
+    width: 50%;
+    margin-bottom: 5em;
+}
+._texto_nosotros{
+    color: black;
+    line-height: 3em;
+    margin: 1em;
+}
+@keyframes cambio {
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+
+    30%{margin-left: -100%;}
+    50%{margin-left: -100%;}
+
+    60%{margin-left: -200%;}
+    80%{margin-left: -200%;}
+
+    90%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+
 }
 
 @media(max-width: 991px){
@@ -387,6 +448,13 @@ margin-right: 1.8em;
         width: 40%;
         margin-top: 2em;
         justify-content: center;
+    }
+    /* Nosotros */
+    .slider{
+        width: 100%;
+    }
+    ._caja_texto_nosotros{
+        width: 100%;
     }
     
 }

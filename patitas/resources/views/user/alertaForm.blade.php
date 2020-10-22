@@ -11,7 +11,10 @@
         </div>
     </div>
 
-</section>  
+</section>
+<footer class="_footer">
+    <h4 class="_texto_footer">Todos los derechos reservados: Tomas Martín Fernandez Wettstein</h4>
+</footer>
 @else
 <section class="_seccion_form_alerta">
         <form action="/formAlerta" method="post" class="_form_alerta" enctype="multipart/form-data">

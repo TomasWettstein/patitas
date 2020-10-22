@@ -50,4 +50,8 @@ class AppController extends Controller
         $nuevaAlerta->save();
         return redirect('/');
     }
+    public function nosotros()
+    {
+        return view('user/nosotros');
+    }
 }

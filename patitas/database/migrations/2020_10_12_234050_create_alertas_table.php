@@ -19,7 +19,8 @@ class CreateAlertasTable extends Migration
             $table->string('animal', 50);
             $table->string('imagen', 600);
             $table->string('nombre', 50)->nullable();
-            $table->string('zona', 100);
+            $table->string('provincia', 100);
+            $table->string('municipio', 100);
             $table->string('color', 50)->nullable();
             $table->string('raza', 50)->nullable();
             $table->string('detalle', 400);

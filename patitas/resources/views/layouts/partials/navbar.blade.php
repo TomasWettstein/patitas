@@ -12,17 +12,25 @@
              </li>
              @endif
              @else
+                <div class="dropdown text-center _nav_item">
+                    <a class="_nav_texto dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Ver alertas
+                    <a>
+                  
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        @foreach ($categorias as $categoria)
+                        <a class="dropdown-item _nav_texto" href="#">{{$categoria->nombre}}</a>
+                        @endforeach
+                    </div>
+                </div>
              <li class = "_nav_item">
-                <a href = "/" class = "_nav_texto">Ver alertas</a>
-             </li>
-             <li class = "_nav_item">
-                <a href = "/crearAlerta" class = "_nav_texto">Crear Alerta</a>
+                <a href = "/crearAlerta" class="_nav_texto">Crear Alerta</a>
              </li>
              <li class = "_nav_item">
                 <a href = "/" class = "_nav_texto">Adoptar</a>
              </li>
              <li class = "_nav_item">
-                <a href = "/" class = "_nav_texto">Nosotros</a>
+                <a href = "/nosotros" class = "_nav_texto">Nosotros</a>
              </li>
              <li class="_nav_item dropdown">
                 <a id="navbarDropdown" class="_nav_texto" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
