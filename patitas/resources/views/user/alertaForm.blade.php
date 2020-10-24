@@ -46,7 +46,7 @@
             <div id="cajaMuni" class="_caja_in_alerta">
                 <label for="municipio" class="_texto_form_alerta">Indique municipio</label>
                 <select name="municipio" id="muni" class="_in_form_alerta">
-                    <option value="" selected disabled>Seleccioneun municipio...</option>
+                    <option value="" selected disabled>Seleccione municipio...</option>
                 </select>
                 <p></p>
             </div>
@@ -64,7 +64,7 @@
             </div>
             <div class="_caja_in_alerta">
                 <label for="categoria" class="_texto_form_alerta">Indique tipo de alerta</label>
-                <select id="categoria" name="categoria" id="" class="_in_form_alerta">
+                <select id="categoria" name="categoria" id="" class="in_form_alerta">
                     <option value="#" selected disabled>Seleccione tipo de alerta...</option>
                     @foreach ($categorias as $categoria)
                     <option value="{{$categoria->id}}">{{$categoria->nombre}}</option>

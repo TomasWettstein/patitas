@@ -24,7 +24,8 @@ class AppController extends Controller
         $reglas = [
             "animal" => "required",
             "imagen" => "mimes:jpg,jpeg,png,bmp|required",
-            "zona" => "required",
+            "provincia" => "required",
+            "municipio" => "required",
             "detalle" => "required",
             "categoria" => "required",
             
@@ -41,7 +42,8 @@ class AppController extends Controller
         $nombreDeArchivo = basename($ruta);
         $nuevaAlerta->imagen = $nombreDeArchivo;
         $nuevaAlerta->nombre = $datos['nombre'];
-        $nuevaAlerta->zona = $datos['zona'];
+        $nuevaAlerta->provincia = $datos['provincia'];
+        $nuevaAlerta->municipio = $datos['municipio'];
         $nuevaAlerta->color = $datos['color'];
         $nuevaAlerta->raza = $datos['raza'];
         $nuevaAlerta->detalle = $datos['detalle'];

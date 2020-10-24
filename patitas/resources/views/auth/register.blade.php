@@ -44,16 +44,16 @@
                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                 </div>
                 <div id = "cajaProv" class="_caja_in_alerta">
-                    <label for="provincia" class="_texto_form_alerta">Indique provincia</label>
-                    <select name="provincia" id="prov" class="">
+                    <label for="provincia" class="_texto_login">Provincia</label>
+                    <select name="provincia" id="prov" class="form-control col-8">
                         <option value="#" selected disabled>Seleccione provincia...</option>
                     </select>
                     <p></p>
                 </div>
                 <div id="cajaMuni" class="_caja_in_alerta">
-                    <label for="municipio" class="_texto_form_alerta">Indique municipio</label>
-                    <select name="municipio" id="muni" class="">
-                        <option value="" selected disabled>Seleccioneun municipio...</option>
+                    <label for="municipio" class="_texto_login">Municipio</label>
+                    <select name="municipio" id="muni" class="form-control col-12">
+                        <option value="" selected disabled>Seleccione municipio...</option>
                     </select>
                     <p></p>
                 </div>
