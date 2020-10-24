@@ -1,7 +1,6 @@
 //Capturo inputs
 let inAnimal = document.getElementById('animal');
 let inNombre = document.getElementById('nombre');
-let inZona = document.getElementById('zona');
 let inColor = document.getElementById('color');
 let inRaza = document.getElementById('raza');
 let inDetalle = document.getElementById('detalle');
@@ -14,7 +13,6 @@ opcional.innerText = "Este campo es opcional";
 //Capturo el div padre de cada input
 let divAnimal = inAnimal.parentElement;
 let divNombre = inNombre.parentElement;
-let divZona = inZona.parentElement;
 let divColor = inColor.parentElement;
 let divRaza = inRaza.parentElement;
 let divDetalle = inDetalle.parentElement;
@@ -40,18 +38,6 @@ inNombre.addEventListener('click', function(event){
 inNombre.addEventListener('blur', function(event){
     event.preventDefault();
     divNombre.removeChild(opcional);
-});
-inZona.addEventListener('click', function(event){
-    event.preventDefault();
-    obligatorio.classList.add('_error');
-    divZona.append(obligatorio);
-});
-inZona.addEventListener('blur', function(event){
-    if(this.value == ""){
-        divZona.append(obligatorio);
-    }else{
-        divZona.removeChild(obligatorio);
-    }
 });
 inColor.addEventListener('click', function(event){
     event.preventDefault();
@@ -95,4 +81,46 @@ inCategoria.addEventListener('blur', function(event){
         divCategoria.removeChild(obligatorio);
     }
 });
+/*Obtener provincias y municipios*/
+let selectProv = document.getElementById('prov');
+let selectMuni = document.getElementById('muni');
+
+/*Funcion para cargar provincias*/
+function cargarProvincias(){
+    let url = `https://apis.datos.gob.ar/georef/api/provincias?campos=id,nombre`;
+    fetch(url)
+    .then(res => res.ok? res.json():Promise.reject(res))
+    .then(datos=> {
+        console.log(datos)
+        let opciones = `<option value="" selected disabled>Seleccione provincia...</option>`;
+        datos.provincias.forEach(el => opciones += `<option value="${el.id}"> ${el.nombre} </option>`);
+        selectProv.innerHTML = opciones;
+    })
+    .catch(err => {
+        console.log(err);
+        let mensaje = err.statusText || "Ocurrio un error";
+        selectProv.nextElementSibling.innerHTML = `Error${err.status}:
+        ${mensaje}`;
+    });
+}
+/*Funcion para cargar municipios */
+function cargarMunicipios(prov){
+    let urlDos = `https://apis.datos.gob.ar/georef/api/municipios?provincia=${prov}&campos=id,nombre&max=100`;
+fetch(urlDos)
+.then(res => res.ok? res.json():Promise.reject(res))
+.then(datos => {
+    console.log(datos);
+    let opciones = `<option value="" selected disabled>Seleccione municipio...</option>`;
+    datos.municipios.forEach(el => opciones += `<option value= "${el.nombre}"> ${el.nombre} </option>`);
+    selectMuni.innerHTML = opciones;
+})
+.catch(err => {
+    console.log(err);
+    let mensaje = err.statusText || "Ocurrio un error";
+        selectMuni.nextElementSibling.innerHTML = `Error${err.status}:
+        ${mensaje}`;
+})
+}
+document.addEventListener('DOMContentLoaded', cargarProvincias);
+selectProv.addEventListener('change', e=> cargarMunicipios(e.target.value));
 

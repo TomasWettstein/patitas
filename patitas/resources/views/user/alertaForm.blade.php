@@ -36,9 +36,19 @@
                 <label for="nombre" class="_texto_form_alerta">Indique nombre del animal que desea reportar</label>
                 <input id="nombre" name="nombre" type="text" class="_in_form_alerta" placeholder="Especifique nombre del animal">
             </div>
-            <div class="_caja_in_alerta">
-                <label for="zona" class="_texto_form_alerta">Indique zona donde esta el animal</label>
-                <input id="zona" name="zona" type="text" class="_in_form_alerta" placeholder="Especifique zona donde se encuentra">
+            <div id = "cajaProv" class="_caja_in_alerta">
+                <label for="provincia" class="_texto_form_alerta">Indique provincia</label>
+                <select name="provincia" id="prov" class="_in_form_alerta">
+                    <option value="#" selected disabled>Seleccione provincia...</option>
+                </select>
+                <p></p>
+            </div>
+            <div id="cajaMuni" class="_caja_in_alerta">
+                <label for="municipio" class="_texto_form_alerta">Indique municipio</label>
+                <select name="municipio" id="muni" class="_in_form_alerta">
+                    <option value="" selected disabled>Seleccioneun municipio...</option>
+                </select>
+                <p></p>
             </div>
             <div class="_caja_in_alerta">
                 <label for="color" class="_texto_form_alerta">Describa el color del animal</label>

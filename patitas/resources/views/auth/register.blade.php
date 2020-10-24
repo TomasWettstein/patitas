@@ -43,6 +43,20 @@
                 <div class="_caja_campos_login">
                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                 </div>
+                <div id = "cajaProv" class="_caja_in_alerta">
+                    <label for="provincia" class="_texto_form_alerta">Indique provincia</label>
+                    <select name="provincia" id="prov" class="">
+                        <option value="#" selected disabled>Seleccione provincia...</option>
+                    </select>
+                    <p></p>
+                </div>
+                <div id="cajaMuni" class="_caja_in_alerta">
+                    <label for="municipio" class="_texto_form_alerta">Indique municipio</label>
+                    <select name="municipio" id="muni" class="">
+                        <option value="" selected disabled>Seleccioneun municipio...</option>
+                    </select>
+                    <p></p>
+                </div>
 
             <div class="form-group row mb-0">
                     <button type="submit" class="btn btn-outline-success _btn_login mt-2">
@@ -52,4 +66,8 @@
         </form>
     </div>
 </section>
+<footer class="_footer">
+    <h4 class="_texto_footer">Todos los derechos reservados: Tomas Martín Fernandez Wettstein</h4>
+</footer>
+<script src="{{asset('/js/formRegistro.js')}}"></script>
 @endsection
