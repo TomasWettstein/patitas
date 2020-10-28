@@ -9,6 +9,19 @@ use Illuminate\Http\Request;
 
 class AppController extends Controller
 {
+    public function inicio()
+    {
+        if(Auth::guest()){
+            return view('user/mensajeAuth');
+        }else {
+            $municipio = Auth::user()->municipio;
+            $perdidos = Alerta::where("categoria_id", "=", 1 , "AND", "municipio", "=", $municipio)->get();
+            $encontrados = Alerta::where("categoria_id", "=", 2, "AND", "municipio","=", $municipio)->get();
+            $adopciones = Alerta::where("categoria_id", "=", "3", "AND", "municipio", "=", $municipio)->get();
+            return view('/welcome')->with('perdidos', $perdidos)->with('encontrados', $encontrados)->with('adopciones', $adopciones);
+
+        }
+    }
     public function mostrarCrearAlerta()
     {
         return view('user/crearAlerta');
@@ -37,15 +50,12 @@ class AppController extends Controller
         $this->validate($datos, $reglas, $mensajes);
         $nuevaAlerta = new Alerta();
         $nuevaAlerta->animal = $datos['animal'];
-        //Subir imagen
-        $ruta = $datos->file("imagen")->store("public");
+        /*Subir imagen*/
+        $ruta = $datos->file('imagen')->store('public');
         $nombreDeArchivo = basename($ruta);
         $nuevaAlerta->imagen = $nombreDeArchivo;
-        $nuevaAlerta->nombre = $datos['nombre'];
         $nuevaAlerta->provincia = $datos['provincia'];
         $nuevaAlerta->municipio = $datos['municipio'];
-        $nuevaAlerta->color = $datos['color'];
-        $nuevaAlerta->raza = $datos['raza'];
         $nuevaAlerta->detalle = $datos['detalle'];
         $nuevaAlerta->categoria_id = $datos['categoria'];
         $nuevaAlerta->usuario_id = $usuario;

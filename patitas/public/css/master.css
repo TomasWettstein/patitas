@@ -170,6 +170,9 @@ header nav{
     color: white;
     background-color: green;
 }
+._mensaje_home{
+    margin-top: 2em;
+}
 /*Login*/
 ._seccion_login{
     margin-top: 50px;

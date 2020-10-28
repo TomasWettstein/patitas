@@ -20,38 +20,58 @@
 <section class="_seccion_home">
     <div class="_caja_home">
         <p class="_titulo_home">Bienvenido {{Auth::user()->name}}</p>
-        <p class="_titulo_home">Estas son las ultimas alertas</p>
+        <p class="_titulo_home">Estas son las ultimas alertas de {{Auth::user()->municipio}}</p>
         <div class="_caja_categorias_home">
             <div class="_caja_categoria_home">
-                <h2>Perdidos</h2>
+                <h2>Perdidos por tu zona</h2>
+                @if ($perdidos->isEmpty())
+                <h2 class="_mensaje_home">No hay animales perdidos por tu zona</h2>
+                @else
+                @foreach ($perdidos as $key => $perdido)
                 <div class="_caja_alerta_home">
-                    <img src="/images/ejemplo.jpg" alt="" class="_img_alerta">
-                    <p>Color: blanco</p>
-                    <p>Raza: Labrador</p>
-                    <p>Detalle: Muy cariñoso</p>
+                    <img src="storage/{{$perdido->imagen}}" alt="" class="_img_alerta">
+                    <p>Se perdio:{{$perdido->animal}}</p>
+                    <p>{{$perdido->detalle}}</p>
+                    <p>Zona: {{$perdido->municipio}}</p>
                     <button class="btn btn-outline-success _btn_home">Ver esta alerta</button>
                 </div>
-
+                @endforeach
+                @endif
+                <a href="#"><h2>Ver todas las alertas de perdidos</h2></a>
             </div>
             <div class="_caja_categoria_home">
-                <h2>En adopción</h2>
+                <h2>Encontrados por tu zona</h2>
+                @if ($encontrados->isEmpty())
+                    <h2 class="_mensaje_home">No hay animales encontrados por tu zona</h2>
+                @else
+                @foreach ($encontrados as $key => $encontrado)
                 <div class="_caja_alerta_home">
-                    <img src="/images/ejemplo.jpg" alt="" class="_img_alerta">
-                    <p>Color: blanco</p>
-                    <p>Raza: Labrador</p>
-                    <p>Detalle: Muy cariñoso</p>
+                    <img src="storage/{{$encontrado->imagen}}" alt="" class="_img_alerta">
+                    <p>Encontraron:{{$encontrado->animal}}</p>
+                    <p>{{$encontrado->detalle}}</p>
+                    <p>Zona: {{$encontrado->municipio}}</p>
                     <button class="btn btn-outline-success _btn_home">Ver esta alerta</button>
                 </div>
+                @endforeach
+                @endif
+                <a href="#"><h2>Ver todas las alertas de encontrados</h2></a>
             </div>
             <div class="_caja_categoria_home">
-                <h2>Encontrados</h2>
+                <h2>En adopción por tu zona</h2>
+                @if ($adopciones->isEmpty())
+                <h2 class="_mensaje_home">No hay animales en adopción por tu zona</h2>
+                @else
+                @foreach ($adopciones as $key => $adopcion)
                 <div class="_caja_alerta_home">
-                    <img src="/images/ejemplo.jpg" alt="" class="_img_alerta">
-                    <p>Color: blanco</p>
-                    <p>Raza: Labrador</p>
-                    <p>Detalle: Muy cariñoso</p>
+                    <img src="storage/{{$adopcion->imagen}}" alt="" class="_img_alerta">
+                    <p>En adopción:{{$adopcion->animal}}</p>
+                    <p>{{$adopcion->detalle}}</p>
+                    <p>Zona: {{$adopcion->municipio}}</p>
                     <button class="btn btn-outline-success _btn_home">Ver esta alerta</button>
                 </div>
+                @endforeach
+                @endif
+                <a href="#"><h2>Ver todas las alertas de adopción</h2></a>
             </div>
         </div>
     </div>
@@ -59,8 +79,5 @@
 <footer class="_footer">
     <h4 class="_texto_footer">Todos los derechos reservados: Tomas Martín Fernandez Wettstein</h4>
 </footer>
-
 @endif
-
-    
 @endsection

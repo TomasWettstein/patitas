@@ -32,10 +32,6 @@
                 <label for="foto" class="_texto_form_alerta">Suba una foto del animal</label>
                 <input name="imagen" type="file" class="_in_form_alerta_file">
             </div>
-            <div class="_caja_in_alerta">
-                <label for="nombre" class="_texto_form_alerta">Indique nombre del animal que desea reportar</label>
-                <input id="nombre" name="nombre" type="text" class="_in_form_alerta" placeholder="Especifique nombre del animal">
-            </div>
             <div id = "cajaProv" class="_caja_in_alerta">
                 <label for="provincia" class="_texto_form_alerta">Indique provincia</label>
                 <select name="provincia" id="prov" class="_in_form_alerta">
@@ -49,14 +45,6 @@
                     <option value="" selected disabled>Seleccione municipio...</option>
                 </select>
                 <p></p>
-            </div>
-            <div class="_caja_in_alerta">
-                <label for="color" class="_texto_form_alerta">Describa el color del animal</label>
-                <input id="color" name="color" type="text" class="_in_form_alerta" placeholder="Especifique el color del animal">
-            </div>
-            <div class="_caja_in_alerta">
-                <label for="raza" class="_texto_form_alerta">Raza de animal</label>
-                <input id="raza" name="raza" type="text" class="_in_form_alerta" placeholder="Especifique raza del animal">
             </div>
             <div class="_caja_in_alerta">
                 <label for="detalle" class="_texto_form_alerta">Ingrese descripción o detalles del animal</label>

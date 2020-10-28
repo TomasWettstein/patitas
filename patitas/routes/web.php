@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 /*Rutas Generales*/
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',  'App\Http\Controllers\AppController@inicio');
 
 Auth::routes();
 Route::get('/crearAlerta', 'App\Http\Controllers\AppController@mostrarCrearAlerta');

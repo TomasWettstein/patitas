@@ -18,11 +18,8 @@ class CreateAlertasTable extends Migration
             $table->timestamps();
             $table->string('animal', 50);
             $table->string('imagen', 600);
-            $table->string('nombre', 50)->nullable();
             $table->string('provincia', 100);
             $table->string('municipio', 100);
-            $table->string('color', 50)->nullable();
-            $table->string('raza', 50)->nullable();
             $table->string('detalle', 400);
             $table->unsignedBigInteger('categoria_id');
             $table->unsignedBigInteger('usuario_id');
