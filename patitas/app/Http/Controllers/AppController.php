@@ -15,9 +15,9 @@ class AppController extends Controller
             return view('user/mensajeAuth');
         }else {
             $municipio = Auth::user()->municipio;
-            $perdidos = Alerta::where("categoria_id", "=", 1 , "AND", "municipio", "=", $municipio)->get();
-            $encontrados = Alerta::where("categoria_id", "=", 2, "AND", "municipio","=", $municipio)->get();
-            $adopciones = Alerta::where("categoria_id", "=", "3", "AND", "municipio", "=", $municipio)->get();
+            $perdidos = Alerta::where("categoria_id", "=", 1 , "AND", "municipio", "=", $municipio)->paginate(1, ['*'], 'perdidos');
+            $encontrados = Alerta::where("categoria_id", "=", 2, "AND", "municipio","=", $municipio)->paginate(1, ['*'], 'encontrados');
+            $adopciones = Alerta::where("categoria_id", "=", "3", "AND", "municipio", "=", $municipio)->paginate(1, ['*'], 'adopciones');
             return view('/welcome')->with('perdidos', $perdidos)->with('encontrados', $encontrados)->with('adopciones', $adopciones);
 
         }

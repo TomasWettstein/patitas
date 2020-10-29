@@ -37,6 +37,9 @@
                 </div>
                 @endforeach
                 @endif
+                <div class="_home_paginate">
+                    {{$perdidos->appends(['encontrados', 'adopciones' => $encontrados->currentPage(), $adopciones->currentPage()])->links('vendor.pagination.simple-tailwind')}}    
+                </div>
                 <a href="#"><h2>Ver todas las alertas de perdidos</h2></a>
             </div>
             <div class="_caja_categoria_home">
@@ -54,6 +57,9 @@
                 </div>
                 @endforeach
                 @endif
+                <div class="_home_paginate">
+                    {{$encontrados->appends(['perdidos', 'adopciones' => $perdidos->currentPage(), $adopciones->currentPage()])->links('vendor.pagination.simple-tailwind')}}    
+                </div>
                 <a href="#"><h2>Ver todas las alertas de encontrados</h2></a>
             </div>
             <div class="_caja_categoria_home">
@@ -71,6 +77,9 @@
                 </div>
                 @endforeach
                 @endif
+                <div class="_home_paginate">
+                    {{$adopciones->appends(['perdidos', 'encontrados' => $perdidos->currentPage(), $encontrados->currentPage()])->links('vendor.pagination.simple-tailwind')}}   
+                </div>
                 <a href="#"><h2>Ver todas las alertas de adopción</h2></a>
             </div>
         </div>
